@@ -605,3 +605,5 @@ else if typeof module is "object" and module.exports
   module.exports = { xhook }
 else if WINDOW
   WINDOW.xhook = xhook
+  if WINDOW.xhook_init
+    WINDOW.xhook_init.forEach((x)=>(x()))
