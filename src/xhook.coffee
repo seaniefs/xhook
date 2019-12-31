@@ -604,6 +604,8 @@ if typeof define is "function" and define.amd
 else if typeof module is "object" and module.exports
   module.exports = { xhook }
 else if WINDOW
+  console.log("Installing xhook")
   WINDOW.xhook = xhook
   if WINDOW.xhook_init
+    console.log("Triggering xhook_init")
     WINDOW.xhook_init.forEach((x)=>(x()))

@@ -694,8 +694,10 @@ if (typeof define === "function" && define.amd) {
     xhook: xhook
   };
 } else if (WINDOW) {
+  console.log("Installing xhook");
   WINDOW.xhook = xhook;
   if (WINDOW.xhook_init) {
+    console.log("Triggering xhook_init");
     WINDOW.xhook_init.forEach((function(_this) {
       return function(x) {
         return x();
